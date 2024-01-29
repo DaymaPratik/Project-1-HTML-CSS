@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .home-container{
+      color: white;
+      background-image: url(/Images/home-img.avif);
+      background-repeat: no-repeat;
+      height: 100vh;
+    }
+    .navbar{
+      width: 100%;
+      background-color: rgb(159, 200, 187);
+      position: fixed;
+      display: flex;
+      height: 10%;
+      background: transparent;
+      
+    }
+    .nav-logo{
+      color: black;
+      width: 40%;
+    }
+    .nav-logo h1{
+      font-size: 35px;
+      padding-top: 2%;
+      padding-left: 15%;
+    }
+    .nav-items{
+      width: 60%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      list-style-type: none;
+    }
+    
+    .nav-items a{
+      color: black;
+      text-decoration: none;
+    }
+    .home{
+    top: 40%;
+    position: absolute;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    }
+    .home p{
+      width: 60%;
+    }
+
+
+
+
+
+
+
+
+    .intro-container{
+      height: 100vh;
+    }
+    .intro1{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+    .left-intro1{
+        width: 35%;
+    }
+    .rigth-intro1{
+        width: 35%;
+    }
+    .rigth-intro1 img{
+      width: 460px;
+    }
+    .intro2{
+        height: 40vh;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        padding-left: 3%;
+    }
+    .intro2-template{
+      width: 25%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    padding: 1%;
+    }
+    .intro2-template h6{
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+    .intro2-template img{
+     width: 50px;
+     margin-bottom: 10%;
+    }
+
+
+
+
+
+    .services{
+     height:100vh; 
+  }
+  .service1{
+     text-align: center;
+     padding: 3% 0.3%;
+  }
+  .service2{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      
+  }
+  .service-template-contnent{
+    width: 100%;
+    padding:10%;
+  }
+  .service-template,.service-template img{
+    border-radius: 15px;
+    
+  }
+  .service-template h3,.price{
+    text-align: center;
+    font-weight: 600;
+  }
+  .service-template button{
+   top: 10px;
+   position: relative;
+   left: 31%;
+  }
+
+
+
+
+  .services-section-2{
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .services-section-2-img{
+    height: 100%;
+    width: 100%;
+  }
+  .services-section-2 .rigth-1,.left-2{
+    padding:10%;
+  }
+  .services-section-2 .rigth-1 h4{
+
+   font-size: 25px;
+   font-weight: 800;
+  }
+  summary{
+    font-size: 20px;
+     list-style: none;
+     margin-top: 20px;
+     font-weight: 600;
+     }
+
+
+
+     .testimonials{
+      height: 50vh;
+     }
+     .testimonials-sect-1{
+    display: grid;
+    place-items: center;
+    height: 45%;
+    text-align: center;
+    
+     }
+     .testimonials-sect-2{
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 25% 25% 25%;
+     }
+     .test-template{
+      height: 100%;
+      display: grid;
+      grid-template-rows: 30% 70%;
+     }
+     .test-template-img{
+      display: grid;
+      place-content: center;
+     }
+     .test-template-content{
+      text-align: center;
+      padding: 0px 10px; 
+     }
+     .testimonials-name{
+      font-weight: 800;
+     }
+
+
+
+
+     .contact{
+      height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     }
+     .contact-left{
+        display: grid;
+        width: 40%;
+     }
+     .contact-left h3{
+      font-size: 25px;
+     }
+     .contact-left{
+      width: 40%;
+     }
+     .contact-rigth{
+        width: 40%;
+     }
+     .contact-rigth .input{
+      display: inline-block;
+      width: 80%;
+      padding: 7px;
+      margin-bottom: 10px;
+     }
+     .contact-rigth button{
+      display: inline-block;
+      width: 83%;
+      padding: 7px;
+     }
+
+
+
+
+     .projects{
+        height: 90%;
+     }
+     .project-1 ul{
+        list-style-type: none;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+     .projects-images{
+      place-items: center;
+      display: grid;
+      width: 100%;
+      grid-template-columns: 20% 20% 20% 20%;
+     }
+  </style>
+
+  
+</head>
+<body>
+  <div class="home-container">
+    <nav class="navbar">
+      <div class="nav-logo"><h1>ARIA</h1></div>
+      <ul class="nav-items" >
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">INTRO</a></li>
+        <li><a href="#">SERVICE</a></li>
+        <li><a href="#">CALL ME</a></li>
+        <li><a href="#">PROJECTS</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+    </nav>
+    <div class="home">
+        <h1>WELCOME HERE!</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque fuga, facilis iure consequuntur ratione distinctio omnis obcaecati repellendus sunt nostrum autem est, dolore amet eos quae assumenda mollitia, deleniti ipsa!</p>
+        <button>CLICK HERE</button>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="intro-container">
+    <div class="intro1">
+          <div class="left-intro1">
+               <p>INTRO</p>
+               <h2>We Offer Some Of The
+                <br> Best Business Growth 
+                <br>Services In Town</h2>
+               <p>Launching a new company or developing the market
+                <br> position of an existing one can be quite an 
+                <br>overwhelming processs at times.</p>
+               <p>"Our mission here at Aira is to get you through those
+                <br> tough moments relying on our team's expertise in
+                <br> starting and growing companies."</p>
+               <h5>Louise Donovan - CEO</h5>
+          </div>
+          <div class="rigth-intro1">
+               <img src="./Images/intro-tittle-img2.avif" alt="">
+          </div>
+    </div>
+
+
+    <div class="intro2">
+           <div class="first-intro2 intro2-template">
+              <img src="./Images/photoshop.png" alt="">
+              <h6>Environment Analysis</h6>
+              <p>The starting point of any success story is 
+                <br> knowing your current position in the
+                <br> business environment</p>
+              
+           </div>
+           <div class="second-intro2 intro2-template">
+            <img src="./Images/photoshop.png" alt="">
+            <h6>Environment Analysis</h6>
+            <p>After completing the environmental analysis
+              <br> the next stage is to design and plan your 
+              <br> development strategy</p>
+            
+           </div>
+           <div class="third-intro3 intro2-template">
+            <img src="./Images/photoshop.png" alt="">
+            <h6>Environment Analysis</h6>
+            <p>In this phase you will focus on executing the 
+              <br> actions plan and evaluating the results after 
+              <br> each marketing campaign</p>
+            
+           </div>
+    </div>
+  </div>
+
+
+
+  <div class="services">
+
+    <div class="service1">
+      <p>SERVICE</p>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure ipsa maxime inventore tempora autem alias fugit aperiam repellendus ducimus mollitia culpa obcaecati velit, quia ullam sit incidunt sunt fuga voluptatem!</p>
+    </div>
+    <div class="service2">
+      <div class="service-template">
+        <img src="/Images/home-img.avif" alt="" width="250px">
+        <h3>Off The Ground Off <br> The Ground</h3>
+        <div class="service-template-contnent">
+          
+        <p>Perfect for fresh ideas or young <br>startups, this package will help <br>get the business off the ground</p>
+        <ul>
+          <li>Environment and competition</li>
+          <li>Environment and competition</li>
+        </ul>
+        <p class="price">Starting at $199</p>
+        <button>BUY HERE</button>
+        </div>
+      </div>
+      <div class="service-template">
+        <img src="/Images/home-img.avif" alt="" width="250px">
+        <h3>Off The Ground Off <br> The Ground</h3>
+        <div class="service-template-contnent">
+        <p>Perfect for fresh ideas or young <br>startups, this package will help <br>get the business off the ground</p>
+        <ul>
+          <li>Environment and competition</li>
+          <li>Environment and competition</li>
+        </ul>
+        <p class="price">Starting at $199</p>
+        <button>BUY HERE</button>
+        </div>
+      </div>
+      <div class="service-template">
+        <img src="/Images/home-img.avif" alt="" width="250px">
+        <h3>Off The Ground Off <br> The Ground</h3>
+        <div class="service-template-contnent">
+        <p>Perfect for fresh ideas or young <br>startups, this package will help <br>get the business off the ground</p>
+        <ul>
+          <li>Environment and competition</li>
+          <li>Environment and competition</li>
+        </ul>
+        <p class="price">Starting at $199</p>
+        <button>BUY HERE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="services-section-2">
+    <div class="left-1 ">
+      <img src="/Images/home-img.avif" alt=""  class="services-section-2-img">
+    </div>
+    <div class="rigth-1">
+      <h4>Accelerate Business Growth To Improve Revenue Numbers</h4>
+      <ol>
+        <li><details>
+          <summary>
+            How Can Aria Help Your Business
+          </summary>
+          <p>At Aria solutions, we’ve taken the consultancy concept one step further by offering a full service management organization with expertise.</p>
+        </details>
+      </li>
+        <li>
+          <details>
+            <summary>
+              How Can Aria Help Your Business
+            </summary>
+            <p>At Aria solutions, we’ve taken the consultancy concept one step further by offering a full service management organization with expertise.</p>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>
+              How Can Aria Help Your Business
+            </summary>
+            <p>At Aria solutions, we’ve taken the consultancy concept one step further by offering a full service management organization with expertise.</p>
+          </details>
+        </li>
+      </ol>
+    </div>
+    <div class="left-2">
+      <h4>Accelerate Business Growth To Improve Revenue Numbers</h4>
+      <ol>
+        <li><details>
+          <summary>
+            How Can Aria Help Your Business
+          </summary>
+          <p>At Aria solutions, we’ve taken the consultancy concept one step further by offering a full service management organization with expertise.</p>
+        </details>
+      </li>
+        <li>
+          <details>
+            <summary>
+              How Can Aria Help Your Business
+            </summary>
+            <p>At Aria solutions, we’ve taken the consultancy concept one step further by offering a full service management organization with expertise.</p>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>
+              How Can Aria Help Your Business
+            </summary>
+            <p>At Aria solutions, we’ve taken the consultancy concept one step further by offering a full service management organization with expertise.</p>
+          </details>
+        </li>
+      </ol>
+    </div>
+    <div class="rigth-2">
+      <img src="/Images/home-img.avif" alt=""  class="services-section-2-img">
+    </div>
+  </div>
+
+
+
+
+  <div class="testimonials">
+    <div class="testimonials-sect-1">
+      <h2>Read Our Customer Testimonials</h2>
+      <p>Our clients are our partners and we can not imagine a better future for our <br>
+        company without helping them reach their objectives</p>
+    </div>
+    <div class="testimonials-sect-2">
+      <div class="test-template">
+        <div class="test-template-img">
+          <img src="./Images/photoshop.png" alt="" width="50px">
+         </div>
+         <div class="test-template-content">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, eligendi a! Et ducimus rem dignissimos ab unde quis accusamus optio.</p>
+          <p class="testimonials-name">Pratik Ramesh Dayma</p>
+         </div>
+      </div>
+      <div class="test-template">
+        <div class="test-template-img">
+          <img src="./Images/photoshop.png" alt="" width="50px">
+         </div>
+         <div class="test-template-content">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, eligendi a! Et ducimus rem dignissimos ab unde quis accusamus optio.</p>
+          <p class="testimonials-name">Pratik Ramesh Dayma</p>
+         </div>
+      </div>
+      <div class="test-template">
+        <div class="test-template-img">
+          <img src="./Images/photoshop.png" alt="" width="50px">
+         </div>
+         <div class="test-template-content">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, eligendi a! Et ducimus rem dignissimos ab unde quis accusamus optio.</p>
+          <p class="testimonials-name">Pratik Ramesh Dayma</p>
+         </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+  <div class="contact">
+    <div class="contact-left">
+<p>CALL ME</p>
+<h3>Have Us Contact You By Filling And Submitting The Form</h3>
+<p>You are just a few steps away from a personalized offer. Just <br>fill in the form and send it to us and we'll get right back with a <br> call to help you decide what service package works.</p>
+<ul>
+  <li><p>It's very easy just fill in the form so we can call</p></li>
+  <li><p>During the call we'll require some info about the company</p></li>
+  <li><p>Don't hesitate to email us for any questions or inquiries</p></li>
+</ul>
+    </div>
+    <div class="contact-rigth">
+  <form action="">
+    <input type="text" placeholder="Name" class="input">
+    <input type="number" placeholder="Phone" class="input" >
+    <input type="email" placeholder="E-mail" class="input ">
+    <input type="text" placeholder="Interested In" class="input ">
+    <p><input type="checkbox" name="checkbox" id="callme-checkbox">
+      <label for="callme-checkbox"> I agree with Aria's stated <u>Privacy Policy </u>and <u>Terms & Conditions</u></label></p>
+      <button>CALL ME</button>
+  </form>
+    </div>
+  </div>
+
+
+
+
+  <div class="projects">
+    <div class="project-1">
+      <p>PROJECTS</p>
+    <h4>Projects That We're Proud Of</h4>
+    <ul>
+      <li><a href="">SHOW ALL</a></li>
+      <li><a href="">DESIGN</a></li>
+      <li><a href="">DEVELOPMENT</a></li>
+      <li><a href="">MARKETING</a></li>
+      <li><a href="">SEO</a></li>
+    </ul>
+    </div>
+      <div class="projects-images">
+        <img src="./Images/home-img.avif" alt=""  width="100%">
+        <img src="./Images/home-img.avif" alt="" width="100%">
+        <img src="./Images/home-img.avif" alt="" width="100%">
+        <img src="./Images/home-img.avif" alt="" width="100%">
+        <img src="./Images/home-img.avif" alt="" width="100%">
+        <img src="./Images/home-img.avif "alt="" width="100%">
+        <img src="./Images/home-img.avif" alt="" width="100%">
+        <img src="./Images/home-img.avif" alt="" width="100%">
+      </div>
+    
+  </div>
+</body>
+</html>
